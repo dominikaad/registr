@@ -4,3 +4,4 @@ kb_start = [
     types.KeyboardButton(text='Информация'),
     types.KeyboardButton(text='Регистрация')
 ]
+

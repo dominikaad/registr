@@ -22,11 +22,11 @@ async def game_start(message: Message, bot: Bot):
         for user in data:
             try:
                 await bot.send_message(text=text, chat_id=user[0])
-                cursor.execute(
-                    "update start_reg set status=(?) ", ('False'))
-                con.commit()
-                cursor.execute(
-                    "DELETE FROM users")
-                con.commit()
+
             except:
                 pass
+        cursor.execute(
+                    "update start_reg set status=(?) ", ('False',))
+        cursor.execute(
+            "DELETE FROM users")
+        con.commit()
